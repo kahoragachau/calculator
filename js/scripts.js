@@ -32,5 +32,23 @@ $(document).ready(function(){
         var result = subtract(number1,number2);
         $('#sub-output').text(result);
         event.preventDefault();
-    })
+    });
+    
+    // Form Multiply
+    $('form#multiply').submit(function(event){
+        var number1 = parseInt($("#mul1").val());
+        var number2 = parseInt($("#mul2").val());
+        var result = multiply(number1,number2);
+        $('#multi-output').text(result);
+        event.preventDefault();
+    });
+
+    // Form Divide
+    $('form#divide').submit(function(event){
+        var number1 = parseInt($("#div1").val());
+        var number2 = parseInt($("#div2").val());
+        var result = divide(number1,number2);
+        $('#div-output').text(result);
+        event.preventDefault();
+    });
 });
